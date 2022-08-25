@@ -1,0 +1,32 @@
+create database cryptedapp;
+
+use cryptedapp;
+
+create table users(
+    name varchar(255),
+    email char(255),
+    dob char(255),
+    phone char(255),
+    address char(255),
+    password varbinary(1024),
+    public_key varbinary(2048),
+    private_key varbinary(2048)
+);
+
+show tables;
+
+select * from files;
+select * from users;
+
+drop table users;
+
+drop table files;
+
+create table files(
+	file_name varchar(255),
+    uploaded_on varchar(255),
+    own_by varchar(255),
+    share_to varchar(255),
+    k_sessions varbinary(2048)
+)
+

@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+  <h1>Files:</h1>
+  <ul class="list-group">
+    {% for file in files_list %}
+      <li class="list-group-item"><a href="/uploads/{{file}}">{{file}}</a>
+    {% endfor %}
+  </ul>
+{% endblock %}
